@@ -1,4 +1,4 @@
-#Hype GlobalBehavior
+# Hype GlobalBehavior
 
 ![00002|690x413](https://forums.tumult.com/uploads/db2156/original/2X/3/356ef771d8a6b793b7466ede91092001d103ce18.png)
 

@@ -1,6 +1,6 @@
 # Hype GlobalBehavior
 
-![00002|690x413](https://forums.tumult.com/uploads/db2156/original/2X/3/356ef771d8a6b793b7466ede91092001d103ce18.png)
+![00002|690x413](https://forums.tumult.com/uploads/db2156/original/3X/8/1/8126ab1c7b2c8b77cd42e3e3398e9276bdabc105.png)
 
 This idea got triggered back in the day :face_with_monocle: when <a href="https://forums.tumult.com/t/outdated-tutorials/2546/4)">trying to explain Custom Behavior as Tweets</a>. The idea stuck with me in a literal form…
 

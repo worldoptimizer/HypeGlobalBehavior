@@ -2,9 +2,9 @@
 
 ![00002|690x413](https://forums.tumult.com/uploads/db2156/original/3X/8/1/8126ab1c7b2c8b77cd42e3e3398e9276bdabc105.png)
 
-This idea got triggered back in the day :face_with_monocle: when <a href="https://forums.tumult.com/t/outdated-tutorials/2546/4)">trying to explain Custom Behavior as Tweets</a>. The idea stuck with me in a literal form…
+This idea got triggered back in the day :face_with_monocle: when <a href="https://forums.tumult.com/t/outdated-tutorials/2546/4)">trying to explain Custom Behavior as Tweets</a>. The idea stuck with me …
 
-Mostly I use Hype these days for Widgets in CMS-Projects so I thought I share the concept of a unified communication pipeline across individual widget. So I recreated LocalConnection from the Flash-days with a little Twitter-twist and named it GlobalBehavior:
+Mostly I use Hype these days for Widgets in CMS-Projects, hence I thought I share the concept of a unified communication pipeline across individual widget. So, I recreated LocalConnection from the Flash-days with a little Twitter-twist and named it GlobalBehavior:
 
 _**Hint:** The code is an extension. It enables all Hype-Widget loaded on the same page to form a broadcast network. Inside the widget are just plain Custom Behavior calls following the rules mentioned in the example. The code from the JS-files below can also just be pasted into the Head-HTML._
 

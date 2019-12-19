@@ -37,6 +37,16 @@ It's rather "simple" how it works…
 * Using the @ symbol directs the custom behavior to only the specified Hype widgets
 * Hint: As in this flow the ping@C is sent to Hype GlobalBehavior and processed there. **A** internally actually only receives the string as is "ping@C" (little grey arrow)
 
+**Version-History:**\
+`1.0	Initial release #-syntax, @-syntax based on Hype Observer Pattern`\
+`1.1	Added callbacks in JS hypedocument.onGlobalBehavior`\
+`1.2	Added iFrame (onedirectional), onedirectional postMessage`\
+`1.3	Refactored code to Revealing Module Pattern, compiled against Closure-compiler, Bidirectional postMessage (Bubble Up, Bubble Down, Bubble Branching)`\
+`1.4  Refactored to new naming and interface, corrected to american english`\
+`1.5   Fixed a bug with iFrame propagation and added a "Singleton" check`\
+`1.6   Added Custom Behavior Ticker feature, code cleanup`\
+`1.7   Removed a bug when triggering a Hype widget in a iFrame that was not present on the same page level`
+
 Content Delivery Network (CDN)
 --
 Latest minified version can be linked into your project using the following in the head section of your project:
@@ -48,13 +58,3 @@ Optionally you can also link a SRI version or specific releases. Read more about
 
 Learn how to use the latest extension version and how to combine extentions into one file at
 https://github.com/worldoptimizer/HypeCookBook/wiki/Including-external-files-and-Hype-extensions
-
-**Updates:**\
-`1.0	Initial release #-syntax, @-syntax based on Hype Observer Pattern`\
-`1.1	Added callbacks in JS hypedocument.onGlobalBehavior`\
-`1.2	Added iFrame (onedirectional), onedirectional postMessage`\
-`1.3	Refactored code to Revealing Module Pattern, compiled against Closure-compiler, Bidirectional postMessage (Bubble Up, Bubble Down, Bubble Branching)`\
-`1.4  Refactored to new naming and interface, corrected to american english`\
-`1.5   Fixed a bug with iFrame propagation and added a "Singleton" check`\
-`1.6   Added Custom Behavior Ticker feature, code cleanup`\
-`1.7   Removed a bug when triggering a Hype widget in a iFrame that was not present on the same page level`

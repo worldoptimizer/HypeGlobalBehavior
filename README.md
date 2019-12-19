@@ -12,15 +12,6 @@ _**Hint:** The code is an extension. It enables all Hype-Widget loaded on the sa
 **Demonstration:**\
 https://playground.maxziebell.de/Hype/GlobalBehavior/
 
-**Installation:**
-
-* Link the runtime below into your head …  `<script type="text/javascript" src="YOURPATH/HypeCustomBehavior.min.js"></script>`. Please don't hotlink from my server in production sites (for testing it is fine) rather put the code in your project or server. 
-* Another way is to drag it into your resource folder (use the minified version). 
-* Or you can copy and paste the code into Head-HTML in your file (full or minified) but then don't forget to wrap in in a script-tag … `<script type="text/javascript">` CODE HERE `</script>`. 
-
-**You only need one of the methods not all!**
-
-
 Explanation
 ---
 It's rather "simple" how it works…

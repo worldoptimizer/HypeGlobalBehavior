@@ -54,7 +54,7 @@ Latest minified version can be linked into your project using the following in t
 <script src="https://cdn.jsdelivr.net/gh/worldoptimizer/HypeGlobalBehavior/HypeGlobalBehavior.min.js"></script>
 ```
 
-Optionally you can also link a SRI version or specific releases. Read more about that on the jsDelivr's global Content Delivery Network (CDN) landing page for this extension at https://www.jsdelivr.com/package/gh/worldoptimizer/HypeGlobalBehavior
+Optionally you can also link a SRI version or specific releases. Read more about that on the JsDelivr (CDN) page for this extension at https://www.jsdelivr.com/package/gh/worldoptimizer/HypeGlobalBehavior
 
 Learn how to use the latest extension version and how to combine extentions into one file at
 https://github.com/worldoptimizer/HypeCookBook/wiki/Including-external-files-and-Hype-extensions

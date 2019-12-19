@@ -37,6 +37,18 @@ It's rather "simple" how it works…
 * Using the @ symbol directs the custom behavior to only the specified Hype widgets
 * Hint: As in this flow the ping@C is sent to Hype GlobalBehavior and processed there. **A** internally actually only receives the string as is "ping@C" (little grey arrow)
 
+Content Delivery Network (CDN)
+--
+Latest minified version can be linked into your project using the following in the head section of your project:
+```html
+<script src="https://cdn.jsdelivr.net/gh/worldoptimizer/HypeGlobalBehavior/HypeGlobalBehavior.min.js"></script>
+```
+
+Optionally you can also link a SRI version or specific releases. Read more about that on the jsDelivr's global Content Delivery Network (CDN) landing page for this extension at https://www.jsdelivr.com/package/gh/worldoptimizer/HypeGlobalBehavior
+
+Learn how to use the latest extension version and how to combine extentions into one file at
+https://github.com/worldoptimizer/HypeCookBook/wiki/Including-external-files-and-Hype-extensions
+
 **Updates:**\
 `1.0	Initial release #-syntax, @-syntax based on Hype Observer Pattern`\
 `1.1	Added callbacks in JS hypedocument.onGlobalBehavior`\

@@ -1,6 +1,7 @@
 # Hype GlobalBehavior
 
 ![00002|690x413](https://playground.maxziebell.de/Hype/GlobalBehavior/HypeGlobalBehavior.png)
+<sup>The cover artwork is not hosted in this repository and &copy;opyrighted by Max Ziebell</sup>
 
 This idea got triggered back in the day :face_with_monocle: when <a href="https://forums.tumult.com/t/outdated-tutorials/2546/4)">trying to explain Custom Behavior as Tweets</a>. The idea stuck with me …
 

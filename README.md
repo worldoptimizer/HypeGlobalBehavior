@@ -1,6 +1,6 @@
 # Hype GlobalBehavior
 
-![00002|690x413](https://playground.maxziebell.de/Hype/GlobalBehavior/HypeGlobalBehavior.png)
+![00002|690x413](https://playground.maxziebell.de/Hype/GlobalBehavior/HypeGlobalBehavior.jpg)
 <sup>The cover artwork is not hosted in this repository and &copy;opyrighted by Max Ziebell</sup>
 
 This idea got triggered back in the day :face_with_monocle: when <a href="https://forums.tumult.com/t/outdated-tutorials/2546/4)">trying to explain Custom Behavior as Tweets</a>. The idea stuck with me …
@@ -41,12 +41,13 @@ It's rather "simple" how it works…
 
 Content Delivery Network (CDN)
 --
-Latest minified version can be linked into your project using the following in the head section of your project:
+Latest version can be linked into your project using the following in the head section of your project:
 ```html
 <script src="https://cdn.jsdelivr.net/gh/worldoptimizer/HypeGlobalBehavior/HypeGlobalBehavior.min.js"></script>
 ```
 
-Optionally you can also link a SRI version or specific releases. Read more about that on the JsDelivr (CDN) page for this extension at https://www.jsdelivr.com/package/gh/worldoptimizer/HypeGlobalBehavior
+Optionally you can also link a SRI version or specific releases. 
+Read more about that on the JsDelivr (CDN) page for this extension at https://www.jsdelivr.com/package/gh/worldoptimizer/HypeGlobalBehavior
 
-Learn how to use the latest extension version and how to combine extentions into one file at
+Learn how to use the latest extension version and how to combine extensions into one file at
 https://github.com/worldoptimizer/HypeCookBook/wiki/Including-external-files-and-Hype-extensions

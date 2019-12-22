@@ -32,8 +32,6 @@ if("HypeGlobalBehavior" in window === false) window['HypeGlobalBehavior'] = (fun
 			/* trigger in hype context */
 			for (var id in docs) {
 				var hypeDoc;
-				console.log(window['HYPE'],window['HYPE']['documents']);
-				console.log(docs[id],id)
 				if (window['HYPE']['documents'].hasOwnProperty(docs[id])){
 					hypeDoc = window['HYPE']['documents'][docs[id]];
 					hypeDoc.triggerCustomBehaviorNamed('#'+ behavior);

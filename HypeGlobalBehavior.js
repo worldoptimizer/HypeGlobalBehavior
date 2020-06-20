@@ -37,6 +37,8 @@ copyright (c) 2018 Max Ziebell, (https://maxziebell.de). MIT-license
  * @name HypeGlobalBehavior
  * @return {HypeGlobalBehavior} See typdef in the unminifed source file
  */
+
+ /** @type {HypeGlobalBehavior} */
 if("HypeGlobalBehavior" in window === false) window['HypeGlobalBehavior'] = (function () {
 	
 	/* Lookup for running intervals by behavior name */

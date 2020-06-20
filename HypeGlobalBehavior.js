@@ -20,8 +20,6 @@ copyright (c) 2018 Max Ziebell, (https://maxziebell.de). MIT-license
  * 1.7   Removed a bug when triggering a Hype widget in a iFrame that was not present on the same page level
  */
 
-
-
 /**
  * @typedef {Object} HypeGlobalBehavior
  * @property {function} allowPostMessageFrom This function allows to limit the iFrame parents by domain that can communicate with the Hype documents contained in the current window using global behavior
@@ -30,7 +28,6 @@ copyright (c) 2018 Max Ziebell, (https://maxziebell.de). MIT-license
  * @property {function} stopCustomBehaviorTicker This function allows to stop a time based global behavior ticker from the window scope. The signatur is equal to hypeDocument.stopCustomBehaviorTicker
  * @property {function} stopAllCustomBehaviorTicker This function allows to stop all time based global behavior ticker from the window scope. The signatur is equal to hypeDocument.stopAllCustomBehaviorTicker
  */
-
 
 if("HypeGlobalBehavior" in window === false) window['HypeGlobalBehavior'] = (function () {
 	
@@ -204,7 +201,10 @@ if("HypeGlobalBehavior" in window === false) window['HypeGlobalBehavior'] = (fun
 	window.HYPE_eventListeners.push({"type":"HypeDocumentLoad", "callback": extendHype});
 	window.HYPE_eventListeners.push({"type":"HypeTriggerCustomBehavior", "callback": globalBehavior});
 
-	/* Reveal Public interface to window['HypeGlobalBehavior'] */
+	/** 
+	 * Reveal Public interface to window['HypeGlobalBehavior'] 
+	 * return {HypeGlobalBehavior}
+	 */
 	return {
 		version: '1.7',
 
@@ -216,9 +216,3 @@ if("HypeGlobalBehavior" in window === false) window['HypeGlobalBehavior'] = (fun
 		'stopAllCustomBehaviorTicker': stopAllCustomBehaviorTicker,
 	};
 })();
-
-/** 
-@name HypeGlobalBehavior
-@type {HypeGlobalBehavior} 
-*/
-HypeGlobalBehavior

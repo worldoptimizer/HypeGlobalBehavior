@@ -2,6 +2,21 @@
 Hype GlobalBehavior 1.7
 copyright (c) 2018 Max Ziebell, (https://maxziebell.de). MIT-license
 */
+
+/**
+ * This module allows to extend custom behavior across Hype document and iFrame boundaries containing Hype documents. There is also an implementation making this work across devices using Pusher.
+ * @module Hype GlobalBehavior
+ */
+
+/**
+ * @typedef {Object} HypeGlobalBehavior
+ * @property {function} allowPostMessageFrom This function allows to limit the iFrame parents by domain that can communicate with the Hype documents contained in the current window using global behavior
+ * @property {function} triggerCustomBehaviorNamed This function allows to trigger a custom behavior from the window scope.  The signature is equal to hypeDocument.triggerCustomBehavior
+ * @property {function} startCustomBehaviorTicker This function allows to start a time based global behavior ticker from the window scope. The signatur is equal to hypeDocument.startCustomBehaviorTicker
+ * @property {function} stopCustomBehaviorTicker This function allows to stop a time based global behavior ticker from the window scope. The signatur is equal to hypeDocument.stopCustomBehaviorTicker
+ * @property {function} stopAllCustomBehaviorTicker This function allows to stop all time based global behavior ticker from the window scope. The signatur is equal to hypeDocument.stopAllCustomBehaviorTicker
+ */
+
 /*
 * Version-History
 * 1.0	Initial release #-syntax, @-syntax based on Hype Observer Pattern
@@ -101,7 +116,6 @@ if("HypeGlobalBehavior" in window === false) window['HypeGlobalBehavior'] = (fun
 		}
 	};
 	
-	/* Define public interface functions */
 	var triggerCustomBehaviorNamed = function(behavior){
 		globalBehavior(null, null, {customBehaviorName:behavior});
 	};

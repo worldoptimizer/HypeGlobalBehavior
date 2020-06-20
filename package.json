@@ -1,0 +1,9 @@
+{
+    "name": "Hype GlobalBehavior",
+    "version": "1.7",
+    "description": "This module allows to extend custom behavior across Hype document and iFrame boundaries containing Hype documents. There is also an implementation making this work across devices using Pusher.",
+    "author": "Max Ziebell",
+    "main":	"HypeGlobalBehavior.js",
+    "license": "MIT",
+    "dependencies": {}
+}

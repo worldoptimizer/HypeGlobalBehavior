@@ -20,7 +20,6 @@ copyright (c) 2018 Max Ziebell, (https://maxziebell.de). MIT-license
  * 1.7   Removed a bug when triggering a Hype widget in a iFrame that was not present on the same page level
  */
 
-
 /**
  * @typedef {Object} HypeGlobalBehavior
  * @property {function} allowPostMessageFrom This function allows to limit the iFrame parents by domain that can communicate with the Hype documents contained in the current window using global behavior
@@ -31,6 +30,10 @@ copyright (c) 2018 Max Ziebell, (https://maxziebell.de). MIT-license
  * @return {HypeGlobalBehavior} See typdef in the unminifed source file
  */
 
+/**
+ * Creates HypeGlobalBehavior in the window scope
+ * @return {HypeGlobalBehavior} See typdef in the unminifed source file
+ */
 if("HypeGlobalBehavior" in window === false) window['HypeGlobalBehavior'] = (function () {
 	
 	/* Lookup for running intervals by behavior name */
@@ -204,10 +207,6 @@ if("HypeGlobalBehavior" in window === false) window['HypeGlobalBehavior'] = (fun
 	window.HYPE_eventListeners.push({"type":"HypeTriggerCustomBehavior", "callback": globalBehavior});
 
 	/* Reveal Public interface to window['HypeGlobalBehavior'] */
-	/**
- 	 * Creates HypeGlobalBehavior in the window scope
- 	 * @return {HypeGlobalBehavior} See typdef in the unminifed source file
- 	 */
 	return {
 		version: '1.7',
 

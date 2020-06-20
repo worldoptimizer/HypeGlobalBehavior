@@ -197,7 +197,7 @@ if("HypeGlobalBehavior" in window === false) window['HypeGlobalBehavior'] = (fun
  	 * Creates HypeGlobalBehavior in the window scope
  	 * @return {HypeGlobalBehavior} See typdef in the unminifed source file
  	 */
- 	 
+
  	/**
 	 * @typedef {Object} HypeGlobalBehavior
 	 * @property {function} allowPostMessageFrom This function allows to limit the iFrame parents by domain that can communicate with the Hype documents contained in the current window using global behavior
@@ -205,6 +205,7 @@ if("HypeGlobalBehavior" in window === false) window['HypeGlobalBehavior'] = (fun
 	 * @property {function} startCustomBehaviorTicker This function allows to start a time based global behavior ticker from the window scope. The signatur is equal to hypeDocument.startCustomBehaviorTicker
 	 * @property {function} stopCustomBehaviorTicker This function allows to stop a time based global behavior ticker from the window scope. The signatur is equal to hypeDocument.stopCustomBehaviorTicker
 	 * @property {function} stopAllCustomBehaviorTicker This function allows to stop all time based global behavior ticker from the window scope. The signatur is equal to hypeDocument.stopAllCustomBehaviorTicker
+	 * @return {HypeGlobalBehavior} See typdef in the unminifed source file
 	 */
 	return {
 		version: '1.7',

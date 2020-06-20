@@ -9,29 +9,29 @@ copyright (c) 2018 Max Ziebell, (https://maxziebell.de). MIT-license
  */
 
 /*
-* Version-History
-* 1.0	Initial release #-syntax, @-syntax based on Hype Observer Pattern
-* 1.1	Added callbacks in JS hypedocument.onLocalConnection
-* 1.2	Added iFrame (onedirectional), onedirectional postMessage
-* 1.3	Refactored code to Revealing Module Pattern, compiled against Closure-compiler, Bidirectional postMessage
-* 1.4	Refactored to new naming and interface, corrected to american english
-* 1.5   Fixed a bug with iFrame propagation and added a "Singleton" check
-* 1.6   Added Custom Behavior Ticker feature, code cleanup
-* 1.7   Removed a bug when triggering a Hype widget in a iFrame that was not present on the same page level
-*/
+ * Version-History
+ * 1.0	Initial release #-syntax, @-syntax based on Hype Observer Pattern
+ * 1.1	Added callbacks in JS hypedocument.onLocalConnection
+ * 1.2	Added iFrame (onedirectional), onedirectional postMessage
+ * 1.3	Refactored code to Revealing Module Pattern, compiled against Closure-compiler, Bidirectional postMessage
+ * 1.4	Refactored to new naming and interface, corrected to american english
+ * 1.5   Fixed a bug with iFrame propagation and added a "Singleton" check
+ * 1.6   Added Custom Behavior Ticker feature, code cleanup
+ * 1.7   Removed a bug when triggering a Hype widget in a iFrame that was not present on the same page level
+ */
 
 
-
+/**
+ * @typedef {Object} HypeGlobalBehavior
+ * @property {function} allowPostMessageFrom This function allows to limit the iFrame parents by domain that can communicate with the Hype documents contained in the current window using global behavior
+ * @property {function} triggerCustomBehaviorNamed This function allows to trigger a custom behavior from the window scope.  The signature is equal to hypeDocument.triggerCustomBehavior
+ * @property {function} startCustomBehaviorTicker This function allows to start a time based global behavior ticker from the window scope. The signatur is equal to hypeDocument.startCustomBehaviorTicker
+ * @property {function} stopCustomBehaviorTicker This function allows to stop a time based global behavior ticker from the window scope. The signatur is equal to hypeDocument.stopCustomBehaviorTicker
+ * @property {function} stopAllCustomBehaviorTicker This function allows to stop all time based global behavior ticker from the window scope. The signatur is equal to hypeDocument.stopAllCustomBehaviorTicker
+ */
 
 if("HypeGlobalBehavior" in window === false) 
-	 /**
-	 * @typedef {Object} HypeGlobalBehavior
-	 * @property {function} allowPostMessageFrom This function allows to limit the iFrame parents by domain that can communicate with the Hype documents contained in the current window using global behavior
-	 * @property {function} triggerCustomBehaviorNamed This function allows to trigger a custom behavior from the window scope.  The signature is equal to hypeDocument.triggerCustomBehavior
-	 * @property {function} startCustomBehaviorTicker This function allows to start a time based global behavior ticker from the window scope. The signatur is equal to hypeDocument.startCustomBehaviorTicker
-	 * @property {function} stopCustomBehaviorTicker This function allows to stop a time based global behavior ticker from the window scope. The signatur is equal to hypeDocument.stopCustomBehaviorTicker
-	 * @property {function} stopAllCustomBehaviorTicker This function allows to stop all time based global behavior ticker from the window scope. The signatur is equal to hypeDocument.stopAllCustomBehaviorTicker
-	 */
+
 
 	 /**
 	 * Creates HypeGlobalBehavior in the window scope

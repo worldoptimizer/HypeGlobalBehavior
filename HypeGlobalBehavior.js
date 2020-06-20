@@ -33,6 +33,10 @@ if("HypeGlobalBehavior" in window === false)
 	 * @property {function} stopAllCustomBehaviorTicker This function allows to stop all time based global behavior ticker from the window scope. The signatur is equal to hypeDocument.stopAllCustomBehaviorTicker
 	 */
 
+	 /**
+	 * Creates HypeGlobalBehavior in the window scope
+	 * @return {HypeGlobalBehavior} See typdef in the unminifed source file
+	 */
 	window['HypeGlobalBehavior'] = (function () {
 	
 	/* Lookup for running intervals by behavior name */

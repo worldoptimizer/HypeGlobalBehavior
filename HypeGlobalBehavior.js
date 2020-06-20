@@ -21,6 +21,11 @@ copyright (c) 2018 Max Ziebell, (https://maxziebell.de). MIT-license
  */
 
 /**
+ * Creates HypeGlobalBehavior in the window scope
+ * @return {HypeGlobalBehavior} See typdef in the unminifed source file
+ */
+
+/**
  * @typedef {Object} HypeGlobalBehavior
  * @property {function} allowPostMessageFrom This function allows to limit the iFrame parents by domain that can communicate with the Hype documents contained in the current window using global behavior
  * @property {function} triggerCustomBehaviorNamed This function allows to trigger a custom behavior from the window scope.  The signature is equal to hypeDocument.triggerCustomBehavior
@@ -29,10 +34,6 @@ copyright (c) 2018 Max Ziebell, (https://maxziebell.de). MIT-license
  * @property {function} stopAllCustomBehaviorTicker This function allows to stop all time based global behavior ticker from the window scope. The signatur is equal to hypeDocument.stopAllCustomBehaviorTicker
  */
 
-/**
- * Creates HypeGlobalBehavior in the window scope
- * @return {HypeGlobalBehavior} See typdef in the unminifed source file
- */
 if("HypeGlobalBehavior" in window === false) window['HypeGlobalBehavior'] = (function () {
 	
 	/* Lookup for running intervals by behavior name */

@@ -27,7 +27,6 @@ copyright (c) 2018 Max Ziebell, (https://maxziebell.de). MIT-license
  * @property {function} startCustomBehaviorTicker This function allows to start a time based global behavior ticker from the window scope. The signatur is equal to hypeDocument.startCustomBehaviorTicker
  * @property {function} stopCustomBehaviorTicker This function allows to stop a time based global behavior ticker from the window scope. The signatur is equal to hypeDocument.stopCustomBehaviorTicker
  * @property {function} stopAllCustomBehaviorTicker This function allows to stop all time based global behavior ticker from the window scope. The signatur is equal to hypeDocument.stopAllCustomBehaviorTicker
- * @return {HypeGlobalBehavior} See typdef in the unminifed source file
  */
 
 /**

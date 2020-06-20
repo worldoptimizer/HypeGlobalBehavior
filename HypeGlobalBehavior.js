@@ -22,6 +22,7 @@ copyright (c) 2018 Max Ziebell, (https://maxziebell.de). MIT-license
 
 /**
  * Creates HypeGlobalBehavior in the window scope
+ * @name HypeGlobalBehavior
  * @return {HypeGlobalBehavior} See typdef in the unminifed source file
  */
 

@@ -31,13 +31,6 @@ copyright (c) 2018 Max Ziebell, (https://maxziebell.de). MIT-license
  * @property {function} stopAllCustomBehaviorTicker This function allows to stop all time based global behavior ticker from the window scope. The signatur is equal to hypeDocument.stopAllCustomBehaviorTicker
  */
 
-
-/**
- * Creates HypeGlobalBehavior in the window scope
- * @name HypeGlobalBehavior
- * @return {HypeGlobalBehavior} See typdef in the unminifed source file
- */
-
 /** 
 @name HypeGlobalBehavior
 @type {HypeGlobalBehavior} 

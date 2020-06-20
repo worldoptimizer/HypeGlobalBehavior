@@ -34,10 +34,7 @@ copyright (c) 2018 Max Ziebell, (https://maxziebell.de). MIT-license
  * Creates HypeGlobalBehavior in the window scope
  * @return {HypeGlobalBehavior} See typdef in the unminifed source file
  */
- (window['HypeGlobalBehavior'])
-
-
-if("HypeGlobalBehavior" in window === false) window['HypeGlobalBehavior'] = (function () {
+window['HypeGlobalBehavior'] = (function () {
 	
 	/* Lookup for running intervals by behavior name */
 	var _ticker = {};

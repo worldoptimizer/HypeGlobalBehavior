@@ -20,11 +20,7 @@ copyright (c) 2018 Max Ziebell, (https://maxziebell.de). MIT-license
  * 1.7   Removed a bug when triggering a Hype widget in a iFrame that was not present on the same page level
  */
 
-/**
- * Creates HypeGlobalBehavior in the window scope
- * @name HypeGlobalBehavior
- * @return {HypeGlobalBehavior} See typdef in the unminifed source file
- */
+
 
 /**
  * @typedef {Object} HypeGlobalBehavior
@@ -35,6 +31,12 @@ copyright (c) 2018 Max Ziebell, (https://maxziebell.de). MIT-license
  * @property {function} stopAllCustomBehaviorTicker This function allows to stop all time based global behavior ticker from the window scope. The signatur is equal to hypeDocument.stopAllCustomBehaviorTicker
  */
 
+
+/**
+ * Creates HypeGlobalBehavior in the window scope
+ * @name HypeGlobalBehavior
+ * @return {HypeGlobalBehavior} See typdef in the unminifed source file
+ */
 if("HypeGlobalBehavior" in window === false) window['HypeGlobalBehavior'] = (function () {
 	
 	/* Lookup for running intervals by behavior name */

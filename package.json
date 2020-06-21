@@ -1,7 +1,7 @@
 {
     "name": "Hype GlobalBehavior",
     "version": "1.7",
-    "description": "This module allows to extend custom behavior across Hype document and iFrame boundaries containing Hype documents. There is also an implementation making this work across devices using Pusher. The function not listed in the JSDoc is the one mainly leveraged in this extension called hypeDocument.triggerCustomBehaviorNamed(behavior). This function is part of the official API and hence not listed in the JSDocs of this extension.",
+    "description": "This module allows to extend custom behavior across Hype document and iFrame boundaries containing Hype documents. There is also an implementation making this work across devices using Pusher. The function not listed in the JSDoc is the one mainly leveraged in this extension is hypeDocument.triggerCustomBehaviorNamed and is part of the official API. Hence the function is essential but not listed in the JSDocs of this extension.",
     "author": "Max Ziebell",
     "main":	"HypeGlobalBehavior.js",
     "license": "MIT",

@@ -126,10 +126,10 @@ if("HypeGlobalBehavior" in window === false) window['HypeGlobalBehavior'] = (fun
 			opt = opt ? opt : {};
 			if (opt.hasOwnProperty('pattern')) {
 				opt._buf = opt.pattern.slice(0);
-				if (opt.countdown==null) opt.countdown = Infinity; //todo implement in 1.8
+				if (opt.countdown==null) opt.countdown = Infinity; //TODO: implement in 1.8
 				fnc=function(){
 					if (opt._buf.length==0) opt._buf = opt.pattern.slice(0);
-					if (opt._buf.shift()) triggerCustomBehaviorNamed(behavior);//todo buffer is string then override behavior with it in 1.8
+					if (opt._buf.shift()) triggerCustomBehaviorNamed(behavior);//TODO: buffer is string then override behavior with it in 1.8
 				}
 			} else {
 				fnc=function(){
@@ -158,36 +158,39 @@ if("HypeGlobalBehavior" in window === false) window['HypeGlobalBehavior'] = (fun
 	var extendHype = function(hypeDocument, element, event) {
 
 		/**
-		* hypeDocument.startCustomBehaviorTicker
-
-		*/
-		/**
 		 * Starts a custom behavior ticker. This is an interval based trigger that offers an optional tick pattern
 		 *
  		 *	hypeDocument.startCustomBehaviorTicker('clockhand',1);
  		 *	hypeDocument.startCustomBehaviorTicker('ticktacktockwait', 0.5, {pattern: [true, true, true, false]});
 		 *
-		 * @param {String} behavior This is the custom behavior name to we want to trigger
+		 * @param {String} behavior This is the custom behavior name to we want to start the ticker for
 		 * @param {Number|Object} time The time in in seconds (can be fractional) or an object with an FPS attribute {FPS:10}
 		 * @param {Object} options Some optional settings like pattern and omit first call
-		 * @param {Object} options.pattern This is an array containg an array with true or false to form a pettern
+		 * @param {Array} options.pattern This is an array containg an array with true or false to form a pettern
+		 * @param {Boolean} options.omitFirst I this is set to true the first call, directly fired when starting will be omitted
 		 */
 		hypeDocument.startCustomBehaviorTicker = function(behavior, time, options){
 			startCustomBehaviorTicker (behavior, time, options);
 		}
 
 		/**
-		* hypeDocument.stopCustomBehaviorTicker
-		* @param {String} behavior name to stop firing
-		*/
+		 * Stops a custom behavior ticker.
+		 *
+ 		 *	hypeDocument.stopCustomBehaviorTicker('clockhand');
+		 *
+		 * @param {String} behavior This is the custom behavior name to we want to stop the ticker for
+		 */
 		hypeDocument.stopCustomBehaviorTicker = function(behavior){
-			stopCustomBehaviorTicker (behavior);
+			stopCustomBehaviorTicker (behavior); //TODO: maybe return if something was stopped in 1.8
 		}
 
 		/**
-		* hypeDocument.stopAllCustomBehaviorTicker
-		* @require stopCustomBehaviorTicker
-		*/
+		 * Stops all custom behavior tickers across the current HTML document
+		 *
+ 		 *	hypeDocument.stopCustomBehaviorTicker('clockhand');
+		 *
+		 * @param {String} behavior This is the custom behavior name to we want to stop the ticker for
+		 */
 		hypeDocument.stopAllCustomBehaviorTicker = function(){
 			stopAllCustomBehaviorTicker ();
 		}

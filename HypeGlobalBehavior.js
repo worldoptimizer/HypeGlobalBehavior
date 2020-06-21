@@ -5,7 +5,7 @@ copyright (c) 2018 Max Ziebell, (https://maxziebell.de). MIT-license
 
 /**
  * This module allows to extend custom behavior across Hype document and iFrame boundaries containing Hype documents. There is also an implementation making this work across devices using Pusher.
- * @module Hype GlobalBehavior
+ * @module HypeGlobalBehavior
  */
 
 /*

@@ -126,10 +126,10 @@ if("HypeGlobalBehavior" in window === false) window['HypeGlobalBehavior'] = (fun
 			opt = opt ? opt : {};
 			if (opt.hasOwnProperty('pattern')) {
 				opt._buf = opt.pattern.slice(0);
-				if (opt.countdown==null) opt.countdown = Infinity;
+				if (opt.countdown==null) opt.countdown = Infinity; //todo implement in 1.8
 				fnc=function(){
 					if (opt._buf.length==0) opt._buf = opt.pattern.slice(0);
-					if (opt._buf.shift()) triggerCustomBehaviorNamed(behavior);
+					if (opt._buf.shift()) triggerCustomBehaviorNamed(behavior);//todo buffer is string then override behavior with it in 1.8
 				}
 			} else {
 				fnc=function(){
@@ -159,10 +159,18 @@ if("HypeGlobalBehavior" in window === false) window['HypeGlobalBehavior'] = (fun
 
 		/**
 		* hypeDocument.startCustomBehaviorTicker
-		* @param {String} behavior name to fire
-		* @param {Number} time in seconds (can be fractional)
-		* @param {Object} Some optional settings like pattern
+
 		*/
+		/**
+		 * Starts a custom behavior ticker. This is an interval based trigger that offers an optional tick pattern
+		 *
+ 		 *	hypeDocument.startCustomBehaviorTicker('clockhand',1);
+ 		 *	hypeDocument.startCustomBehaviorTicker('ticktacktockwait', 0.5, {pattern: [true, true, true, false]});
+		 *
+		 * @param {String} behavior This is the custom behavior name to we want to trigger
+		 * @param {Number|{FPS:Number}} time The time in in seconds (can be fractional) or an object with an FPS attribute {FPS:10}
+		 * @param {{pattern:Array, omitFirst:Boolean}} Some optional settings like pattern and omit first call
+		 */
 		hypeDocument.startCustomBehaviorTicker = function(behavior, time, opt){
 			startCustomBehaviorTicker (behavior, time, opt);
 		}

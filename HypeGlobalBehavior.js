@@ -1,6 +1,6 @@
 /*!
-Hype GlobalBehavior 1.7
-copyright (c) 2018 Max Ziebell, (https://maxziebell.de). MIT-license
+Hype GlobalBehavior 1.8
+copyright (c) 2020 Max Ziebell, (https://maxziebell.de). MIT-license
 */
 
 /**
@@ -15,9 +15,10 @@ copyright (c) 2018 Max Ziebell, (https://maxziebell.de). MIT-license
  * 1.2	Added iFrame (onedirectional), onedirectional postMessage
  * 1.3	Refactored code to Revealing Module Pattern, compiled against Closure-compiler, Bidirectional postMessage
  * 1.4	Refactored to new naming and interface, corrected to american english
- * 1.5   Fixed a bug with iFrame propagation and added a "Singleton" check
- * 1.6   Added Custom Behavior Ticker feature, code cleanup
- * 1.7   Removed a bug when triggering a Hype widget in a iFrame that was not present on the same page level
+ * 1.5  Fixed a bug with iFrame propagation and added a "Singleton" check
+ * 1.6  Added Custom Behavior Ticker feature, code cleanup
+ * 1.7  Removed a bug when triggering a Hype widget in a iFrame that was not present on the same page level
+ * 1.8  Fixed some minor issues when calling from page context on a page without Hype documents
  */
 
 
@@ -36,16 +37,19 @@ if("HypeGlobalBehavior" in window === false) window['HypeGlobalBehavior'] = (fun
 			/* command parser */
 			var args = event.customBehaviorName.split('@');
 			var behavior = args.shift();
-			var docs = (args.length==0) ? Object.keys(window['HYPE']['documents']) : args;
 			/* trigger in hype context */
-			for (var id in docs) {
-				var hypeDoc;
-				if (window['HYPE']['documents'].hasOwnProperty(docs[id])){
-					hypeDoc = window['HYPE']['documents'][docs[id]];
-					hypeDoc.triggerCustomBehaviorNamed('#'+ behavior);
-					if (hypeDoc.hasOwnProperty('onGlobalBehavior')) {
-						hypeDoc['onGlobalBehavior']('#'+ behavior);
-					}
+			if(window.hasOwnProperty('HYPE')) {
+				if(window['HYPE'].hasOwnProperty('documents')) {
+					var docs = (args.length==0) ? Object.keys(window['HYPE']['documents']) : args;
+					for (var id in docs) {
+						if (window['HYPE']['documents'].hasOwnProperty(docs[id])){
+							var hypeDoc = window['HYPE']['documents'][docs[id]];
+							hypeDoc.triggerCustomBehaviorNamed('#'+ behavior);
+							if (hypeDoc.hasOwnProperty('onGlobalBehavior')) {
+								hypeDoc['onGlobalBehavior']('#'+ behavior);
+							}
+						}
+					} 
 				}
 			}
 			/* trigger in page context */
@@ -216,7 +220,7 @@ if("HypeGlobalBehavior" in window === false) window['HypeGlobalBehavior'] = (fun
 	 * @property {Function} stopAllCustomBehaviorTicker This function allows to stop all time based global behavior ticker from the window scope. The signatur is equal to hypeDocument.stopAllCustomBehaviorTicker
 	 */
 	var HypeGlobalBehavior = {
-		version: '1.7',
+		version: '1.8',
 
 		'allowPostMessageFrom': allowPostMessageFrom,
 		'triggerCustomBehaviorNamed': triggerCustomBehaviorNamed,

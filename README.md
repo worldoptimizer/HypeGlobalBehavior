@@ -39,7 +39,7 @@ It's rather "simple" how it works…
 `1.6   Added Custom Behavior Ticker feature, code cleanup`\
 `1.7   Removed a bug when triggering a Hype widget in a iFrame that was not present on the same page level`
 
-Documentation
+## Documentation
 There is a JSDoc based documentation of the functions at https://doxdox.org/worldoptimizer/HypeGlobalBehavior
 
 Content Delivery Network (CDN)
